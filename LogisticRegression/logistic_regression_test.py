@@ -5,7 +5,7 @@ from sklearn.datasets import make_classification
 
 '''
     This file includes unit tests for logistic_regression.py
-    You could test the correctness of the code by typing `nosetests -v logistic_regression.py` in the terminal.
+    You could test the correctness of the code by typing `nosetests -v logistic_regression_test.py` in the terminal.
 '''
 #-------------------------------------------------------------------------
 def test_python_version():
