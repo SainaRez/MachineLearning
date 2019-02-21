@@ -4,6 +4,7 @@ import math
 #-------------------------------------------------------------------------
 '''
     Softmax Regression 
+    This file uses python 3
     This is the implementaiton of softmax regression for multi-class classification problems.
     The main goal is to extend the logistic regression method to solving multi-class classification problems.
     I use multi-class cross entropy as the loss function and stochastic gradient descent to train the model parameters.

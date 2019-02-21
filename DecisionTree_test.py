@@ -3,7 +3,7 @@ import numpy as np
 import sys
 '''
     Unit test 1:
-    This file includes unit tests for py.py.
+    This file includes unit tests for DecisionTree.py and uses python 3
     Type `nosetests3 -v test1.py` in the terminal to test DecisionTree.py
 '''
 
@@ -16,7 +16,7 @@ def test_python_version():
 
 #-------------------------------------------------------------------------
 def test_entropy():
-    ''' (4.5 points) entropy '''
+
     y = np.array([0.,0.])
     e = Tree.entropy(y)
     assert np.allclose(e, 0., atol = 1e-3) 
@@ -63,7 +63,6 @@ def test_entropy():
 
 #-------------------------------------------------------------------------
 def test_conditional_entropy():
-    '''(6 points) conditional entropy '''
 
     y = np.array([0.,0.])
     x = np.array([1.,1.])
@@ -118,7 +117,6 @@ def test_conditional_entropy():
 
 #-------------------------------------------------------------------------
 def test_information_gain():
-    '''(3 points) information gain'''
 
     y = np.array([0.,1.])
     x = np.array([1.,2.])
@@ -155,7 +153,6 @@ def test_information_gain():
 
 #-------------------------------------------------------------------------
 def test_best_attribute():
-    '''(4.5 points) best attribute'''
 
     X = np.array([[1.,1.],
                   [1.,2.]])
@@ -198,7 +195,6 @@ def test_best_attribute():
 
 #-------------------------------------------------------------------------
 def test_split():
-    '''(4.5 points) split'''
 
     X = np.array([['apple','orange','pineapple','banana'],
                   ['high','high','low','low'],
@@ -293,7 +289,6 @@ def test_split():
 
 #-------------------------------------------------------------------------
 def test_stop1():
-    '''(4.5 points) stop1'''
 
     Y = np.array(['good','bad','okay','perfect'])
     assert Tree.stop1(Y) == False
@@ -305,7 +300,7 @@ def test_stop1():
 
 #-------------------------------------------------------------------------
 def test_stop2():
-    '''(4.5 points) stop2'''
+
     X = np.array([['apple','orange','pineapple','banana'],
                   ['high','high','low','low'],
                   ['a','b','c','d']])
@@ -336,7 +331,6 @@ def test_stop2():
 
 #-------------------------------------------------------------------------
 def test_most_common():
-    '''(3 points) most_common'''
 
     Y = np.array(['good','bad','good','perfect'])
     assert Tree.most_common(Y) == 'good'
@@ -347,7 +341,7 @@ def test_most_common():
 
 #-------------------------------------------------------------------------
 def test_build_tree():
-    '''(3 points) build_tree'''
+
     X = np.array([['apple'],
                   ['high'],
                   ['a']])
@@ -544,7 +538,6 @@ def test_build_tree():
 
 #-------------------------------------------------------------------------
 def test_train():
-    '''(4.5 points) train'''
 
     X = np.array([['apple','apple','apple','banana'],
                   ['high','low','low','high'],
@@ -623,7 +616,6 @@ def test_train():
 
 #-------------------------------------------------------------------------
 def test_inference():
-    '''(4.5 points) inference'''
 
     t = Node(None,None) 
     t.isleaf = True
@@ -674,11 +666,9 @@ def test_inference():
     assert y == 'c3' 
     
 
-
-
 #-------------------------------------------------------------------------
 def test_predict():
-    '''(4.5 points) predict'''
+
     t = Node(None,None) 
     t.isleaf = False 
     t.i = 1
@@ -727,7 +717,7 @@ def test_load_dataset():
 
 #-------------------------------------------------------------------------
 def test_dataset1():
-    '''(4.5 points) test_dataset1'''
+
     X, Y = Tree.load_dataset()
     t = Tree.train(X,Y) 
     Y_predict = Tree.predict(t,X) 

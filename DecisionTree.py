@@ -6,6 +6,7 @@ from collections import Counter
 
 '''
     Decision Tree (with Discrete Attributes)
+    This file uses python 3
 '''
         
 #-----------------------------------------------

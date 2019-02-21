@@ -5,7 +5,8 @@ from sklearn.datasets import make_classification
 
 '''
     Unit test 1:
-    You could test the correctness of the code by typing `nosetests -v test1.py` in the terminal.
+    This file uses python 3
+    You could test the correctness of the code by typing `nosetests3 -v softmax_regression_test.py` in the terminal.
 '''
 #-------------------------------------------------------------------------
 def test_python_version():
