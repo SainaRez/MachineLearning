@@ -3,10 +3,11 @@ import numpy as np
 #-------------------------------------------------------------------------
 '''
     Logistic Regression 
+    This file uses python 3
     This file implements the logistic regression method for binary classification problems.
     The goal is to get use a model-based classification method, and train the model parameters on the training data.
     I use cross entropy (log loss) as the loss function and stochastic gradient descent to train the model parameters.
-    You could test the correctness the code by typing `nosetests test1.py` in the terminal.
+    You could test the correctness the code by typing `nosetests3 logistic_regression_test.py` in the terminal.
 
     Notations:
             ---------- input data ----------------------
